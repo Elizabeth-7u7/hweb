@@ -15,15 +15,18 @@
     <h1>Registro al Concurso &ldquo;Chidos mis Tenis&rdquo;</h1>
 
     <p>¿Quieres cambiar tus viejos tenis por un par personalizado de Tenis Mike&#174;?<br><br>Justifica el por qué tus tenis se <em>tienen que</em> ir y tú puedes ser uno de los diez afortunados ganadores.</p>
-<form action="http://localhost/hweb/practicas/p09/concurso.php" method="post"></form>
+<form action="http://localhost/hweb/practicas/p09/concurso.php" method="post">
 
-    <p>Información del Participante</p>
+  <fieldset>
+    <legend>
+      INformacion del Personal
+    </legend>
 
     <ul>
     <li>Nombre:</li>
     <input type="text" name="name"></li>
     <li>Dirección de E-mail:</li>
-    <input type="text" email="email"></li>
+    <input type="email" name="email"></li>
     <li>Número Telefónico:</li>
     <input type="tel" name="phone"></li>
 
@@ -33,19 +36,28 @@
 
     </ul>
 
+  </fieldset>
+  
     <h2>Diseña tus Mike personalizados:</h2>
+<fieldset>
+  <legend>Diseño Personalizado del Tenis</legend>
 
-    <p>Diseño personalizado del Tenis</p>
-
-    <p>Color <em>(escoge uno)</em>:</p>
+<fieldset>
+  <legend>
+    Color (escoge uno)
+  </legend>
       <ul>
       <li><input type="radio" name="color" value="red"> Rojo</li>
       <li><input type="radio" name="color" value="blue" checked="checked"> Azul</li>
       <li><input type="radio" name="color" value="black"> Negro</li>
       <li><input type="radio" name="color" value="silver"> Plateado</li>
       </ul>
-
-    <p>Características <em>(escoge tantas como quieras)</em>:</p>
+      
+ </fieldset>
+<fieldset>
+  <legend>
+    Características (escoge tantas como quieras)
+  </legend>
       <ul>
     <li>
     <input type="checkbox" name="features[]" value="laces">
@@ -67,8 +79,36 @@
     WiFi integrado
     </li>
     </ul>
-    <p>Talla</p>
-    <p>Las medidas reflejan el estándar masculino:</p>
+
+</fieldset>
+    <fieldset>
+      <legend>
+        Talla
+      </legend>
+      <p>Las medidas reflejan el estandar masculino</p>
+   
+<select name="size" size="1">
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="13">13</option>
+<option value="15">15</option>
+</select>
+
+</fieldset>
+
+</fieldset>
+
+<p>
+    <input type="submit" value="¡Chidos mis Tenis!">
+    <input type="reset" value="Restablecer">
+</p>
 
 </form>
   </body>
